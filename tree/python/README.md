@@ -1,21 +1,8 @@
-# stack implementation in python3
+# tree search implementations in python3
 
-## implementation
+see the `tree.py` file to see binary search tree implementations in both recursive and iterative fashion.
 
-### initialization
-
-from stack import Stack
-
-test_stack = Stack()
-
-### api
-
-peek, pop, push, get_size(), get_type()
-
-### restrictions
-
-raises a TypeError if mismatched types are pushed
-
+see the `test_tree.py` file which covers preorder, inorder, and postorder results
 
 ## dependency management
 ```
@@ -30,32 +17,22 @@ make test
 ```
 
 ```
-collected 5 items                                                                               
+pytest --cov-report term-missing --cov=tree test_tree.py
+======================= test session starts =======================
+platform darwin -- Python 3.8.9, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
+rootdir: /Users/taimorekhan/code/data-structures/tree/python
+plugins: cov-3.0.0
+collected 5 items
 
-test_stack.py .....                                                                       [100%]
+test_tree.py .....                                          [100%]
 
----------- coverage: platform darwin, python 3.8.2-final-0 -----------
-Name       Stmts   Miss  Cover   Missing
-----------------------------------------
-stack.py      29      0   100%
-----------------------------------------
-TOTAL         29      0   100%
+---------- coverage: platform darwin, python 3.8.9-final-0 -----------
+Name      Stmts   Miss  Cover   Missing
+---------------------------------------
+tree.py      33      0   100%
+---------------------------------------
+TOTAL        33      0   100%
 
 
-======================================= 5 passed in 0.04s =======================================
-```
-
-## end to end testing
-```
-cd end-to-end/
-pip3 install -r requirements.txt
-cd ..
-make etest
-```
-
-```
-2 features passed, 0 failed, 0 skipped
-4 scenarios passed, 0 failed, 0 skipped
-17 steps passed, 0 failed, 0 skipped, 0 undefined
-Took 0m0.002s
+======================== 5 passed in 0.05s ========================
 ```
