@@ -1,0 +1,7 @@
+* data-structures
+
+space to practice implementing common data structures
+
+** Resources
+
+- [[https://www.bigocheatsheet.com][Big O Cheat Sheet]]
