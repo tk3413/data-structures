@@ -63,4 +63,9 @@ def test_dfs_recurs_postorder(node_1, node_2, node_3, node_4, node_5):
 def test_dfs_iterative(node_1, node_2, node_3, node_4, node_5):
     t = tree.Tree()
     t.dfs_iterative_preord(node=node_2)
-    assert[v for v in t.visits if v is not None] == [2, 1, 4, 3, 5]
+    assert [v for v in t.visits if v is not None] == [2, 1, 4, 3, 5]
+
+def test_bfs(node_1, node_2, node_3, node_4, node_5):
+    t = tree.Tree()
+    t.bfs(node_2)
+    assert [v for v in t.visits if v is not None] == [2, 1, 4, 3, 5]

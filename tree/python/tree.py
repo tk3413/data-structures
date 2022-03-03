@@ -46,3 +46,16 @@ class Tree:
                 self.visits.append(n.val)
                 stack.append(n.right)
                 stack.append(n.left)
+
+    def bfs(self, node:Optional[Node]) -> None:
+        from queue import Queue
+        q = Queue()
+        if node:
+            q.put(node)
+        while q.qsize() > 0:
+            n = q.get()
+            print(n)
+            if n:
+                self.visits.append(n.val)
+                q.put(n.left)
+                q.put(n.right)
